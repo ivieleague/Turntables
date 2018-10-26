@@ -27,7 +27,7 @@ class GoalListScreen: UIViewController {
         
         var tempGoals: [Goal] = []
         
-        let goal1 = Goal(goalTitle: "Eat Healthy", goalReminder: "Repeat every 2 hours", goalProgress: "50", goalColor: UIColor(red: 0.0, green: 0.004, blue: 0.502, alpha: 1.0))
+        let goal1 = Goal(goalTitle: "Eat Healthy", goalReminder: "Repeat every 2 hours", goalProgress: "50", goalColor: UIColor(rgb: 0xd3d3d3))
         let goal2 = Goal(goalTitle: "Go to the Gym", goalReminder: "Daily - 5 AM", goalProgress: "100", goalColor: .green)
         let goal3 = Goal(goalTitle: "Pray", goalReminder: "Daily - 6 AM", goalProgress: "100", goalColor: .purple)
         let goal4 = Goal(goalTitle: "Finish Paper", goalReminder: "No Repeat - 7 PM", goalProgress: "25", goalColor: .blue)
@@ -57,4 +57,22 @@ extension GoalListScreen: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
 }
