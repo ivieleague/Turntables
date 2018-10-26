@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DjH-wj-EtZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Goal List Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GoalListScreen" customModule="Turntables" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wr1-y9-Som">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalCell" rowHeight="70" id="IW2-Hu-fZI" customClass="GoalCell" customModule="Turntables" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IW2-Hu-fZI" id="xnY-aL-E2V">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat Healthy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nO9-zc-OmT" userLabel="goalLabel">
+                                                    <rect key="frame" x="15" y="5" width="350" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="eAm-d9-Wa7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat Every 2 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jo-Kv-yPf" userLabel="reminderLabel">
+                                                    <rect key="frame" x="20" y="26" width="340" height="17.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17.5" id="t1l-QM-QPg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IK-LH-N6S" userLabel="progressLabel">
+                                                    <rect key="frame" x="20" y="43.5" width="340" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="oQU-FY-tat"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mMC-23-uvc">
+                                                    <rect key="frame" x="59" y="53" width="240" height="2"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1jo-Kv-yPf" firstAttribute="top" secondItem="nO9-zc-OmT" secondAttribute="bottom" id="FGm-hj-7GC"/>
+                                                <constraint firstAttribute="trailing" secondItem="1jo-Kv-yPf" secondAttribute="trailing" constant="15" id="KYa-lQ-E4N"/>
+                                                <constraint firstAttribute="trailing" secondItem="3IK-LH-N6S" secondAttribute="trailing" constant="15" id="Rev-NC-Mpa"/>
+                                                <constraint firstItem="nO9-zc-OmT" firstAttribute="top" secondItem="xnY-aL-E2V" secondAttribute="top" constant="5" id="Xm7-xI-C3M"/>
+                                                <constraint firstItem="1jo-Kv-yPf" firstAttribute="leading" secondItem="xnY-aL-E2V" secondAttribute="leading" constant="20" id="bpw-yr-aCh"/>
+                                                <constraint firstItem="3IK-LH-N6S" firstAttribute="leading" secondItem="xnY-aL-E2V" secondAttribute="leading" constant="20" id="khc-oN-qAo"/>
+                                                <constraint firstItem="nO9-zc-OmT" firstAttribute="leading" secondItem="xnY-aL-E2V" secondAttribute="leading" constant="15" id="lIV-xJ-8aR"/>
+                                                <constraint firstItem="3IK-LH-N6S" firstAttribute="top" secondItem="1jo-Kv-yPf" secondAttribute="bottom" id="n2k-a2-l3U"/>
+                                                <constraint firstAttribute="trailing" secondItem="nO9-zc-OmT" secondAttribute="trailing" constant="10" id="pCj-Ex-Rxn"/>
+                                                <constraint firstAttribute="bottom" secondItem="3IK-LH-N6S" secondAttribute="bottom" constant="5" id="sja-if-sZK"/>
+                                                <constraint firstItem="3IK-LH-N6S" firstAttribute="top" secondItem="1jo-Kv-yPf" secondAttribute="bottom" id="tbI-vH-GN6"/>
+                                                <constraint firstItem="1jo-Kv-yPf" firstAttribute="top" secondItem="nO9-zc-OmT" secondAttribute="bottom" id="xS5-ID-K7j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goalProgressBar" destination="mMC-23-uvc" id="Bmz-yk-gbH"/>
+                                            <outlet property="goalProgressLabel" destination="3IK-LH-N6S" id="UCM-cE-P6L"/>
+                                            <outlet property="goalReminder" destination="1jo-Kv-yPf" id="H3r-Nm-b7b"/>
+                                            <outlet property="goalTitle" destination="nO9-zc-OmT" id="uqm-OW-aZr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wr1-y9-Som" secondAttribute="bottom" id="9Og-7E-bbm"/>
+                            <constraint firstItem="Wr1-y9-Som" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q0F-V5-wFo"/>
+                            <constraint firstItem="Wr1-y9-Som" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WBi-bS-AiH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wr1-y9-Som" secondAttribute="trailing" id="slt-kT-XQF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NKp-x9-kGt"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="Wr1-y9-Som" id="nzn-2A-FPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919.20000000000005" y="131.78410794602701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HIZ-uJ-zw7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DjH-wj-EtZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TgQ-ko-JzK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2BX-H1-ppO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uyd-nQ-bJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
